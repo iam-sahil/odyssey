@@ -4,7 +4,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { IconArrowRight } from "@tabler/icons-react"
-import { CornerDownLeftIcon, SquareDashedIcon } from "lucide-react"
+import { CornerDownLeftIcon, Sparkles, SquareDashedIcon } from "lucide-react"
 
 import { type Color, type ColorPalette } from "@/lib/colors"
 import { showMcpDocs } from "@/lib/flags"
@@ -14,6 +14,7 @@ import { useConfig } from "@/hooks/use-config"
 import { useIsMac } from "@/hooks/use-is-mac"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
+import { Icons } from "@/components/icons"
 import { Button } from "@/registry/new-york-v4/ui/button"
 import {
   Command,
@@ -142,7 +143,7 @@ export function CommandMenu({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          variant="secondary"
+          variant="search"
           className={cn(
             "bg-surface text-surface-foreground/60 dark:bg-card relative h-8 w-full justify-start pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64"
           )}
@@ -322,25 +323,36 @@ export function CommandMenu({
           </CommandList>
         </Command>
         <div className="text-muted-foreground absolute inset-x-0 bottom-0 z-20 flex h-10 items-center gap-2 rounded-b-xl border-t border-t-neutral-100 bg-neutral-50 px-4 text-xs font-medium dark:border-t-neutral-700 dark:bg-neutral-800">
-          <div className="flex items-center gap-2">
-            <CommandMenuKbd>
-              <CornerDownLeftIcon />
-            </CommandMenuKbd>{" "}
-            {selectedType === "page" || selectedType === "component"
-              ? "Go to Page"
-              : null}
-            {selectedType === "color" ? "Copy OKLCH" : null}
+          <div className="flex w-full items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <CommandMenuKbd>
+                <CornerDownLeftIcon />
+              </CommandMenuKbd>{" "}
+              {selectedType === "page" || selectedType === "component"
+                ? "Go to Page"
+                : null}
+              {selectedType === "color" ? "Copy OKLCH" : null}
+              {copyPayload && (
+                <>
+                  <Separator orientation="vertical" className="!h-4" />
+                  <div className="flex items-center gap-1">
+                    <CommandMenuKbd>{isMac ? "⌘" : "Ctrl"}</CommandMenuKbd>
+                    <CommandMenuKbd>C</CommandMenuKbd>
+                    {copyPayload}
+                  </div>
+                </>
+              )}
+            </div>
+            <a
+              className="text-primary flex items-center gap-2"
+              href="https://github.com/iam-sahil/odyssey"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icons.gitHub className="h-4" />
+              <p>Give us a star</p>
+            </a>
           </div>
-          {copyPayload && (
-            <>
-              <Separator orientation="vertical" className="!h-4" />
-              <div className="flex items-center gap-1">
-                <CommandMenuKbd>{isMac ? "⌘" : "Ctrl"}</CommandMenuKbd>
-                <CommandMenuKbd>C</CommandMenuKbd>
-                {copyPayload}
-              </div>
-            </>
-          )}
         </div>
       </DialogContent>
     </Dialog>
