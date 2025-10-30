@@ -1,6 +1,4 @@
-import type { Metadata } from "next"
-
-import { META_THEME_COLORS, siteConfig } from "@/lib/config"
+import { META_THEME_COLORS } from "@/lib/config"
 import { fontVariables } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { LayoutProvider } from "@/hooks/use-layout"
