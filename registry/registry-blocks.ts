@@ -189,19 +189,10 @@ export const blocks: Registry["items"] = [
         target: "components/editor/nodes/layout-item-node.tsx",
         type: "registry:file",
       },
-      {
-        path: "editor/nodes/mention-node.ts",
-        target: "components/editor/nodes/mention-node.ts",
-        type: "registry:file",
-      },
+     
       {
         path: "editor/plugins/actions/actions-plugin.tsx",
         target: "components/editor/plugins/actions/actions-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/character-limit-plugin.tsx",
-        target: "components/editor/plugins/actions/character-limit-plugin.tsx",
         type: "registry:component",
       },
       {
@@ -209,47 +200,14 @@ export const blocks: Registry["items"] = [
         target: "components/editor/plugins/actions/clear-editor-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/actions/counter-character-plugin.tsx",
-        target:
-          "components/editor/plugins/actions/counter-character-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-        target: "components/editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/import-export-plugin.tsx",
-        target: "components/editor/plugins/actions/import-export-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/markdown-toggle-plugin.tsx",
-        target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/max-length-plugin.tsx",
-        target: "components/editor/plugins/actions/max-length-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/share-content-plugin.tsx",
-        target: "components/editor/plugins/actions/share-content-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/speech-to-text-plugin.tsx",
-        target: "components/editor/plugins/actions/speech-to-text-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/actions/tree-view-plugin.tsx",
-        target: "components/editor/plugins/actions/tree-view-plugin.tsx",
-        type: "registry:component",
-      },
+  
+    
+
+      
+     
+   
+   
+     
       {
         path: "editor/plugins/embeds/auto-embed-plugin.tsx",
         target: "components/editor/plugins/embeds/auto-embed-plugin.tsx",
@@ -398,12 +356,7 @@ export const blocks: Registry["items"] = [
           "components/editor/plugins/toolbar/block-insert/insert-embeds.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-        target:
-          "components/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-        type: "registry:component",
-      },
+  
       {
         path: "editor/plugins/toolbar/block-insert/insert-image.tsx",
         target:
@@ -427,12 +380,7 @@ export const blocks: Registry["items"] = [
         target: "components/editor/plugins/toolbar/block-insert-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx",
-        target:
-          "components/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
+      
       {
         path: "editor/plugins/toolbar/code-language-toolbar-plugin.tsx",
         target:
@@ -463,33 +411,8 @@ export const blocks: Registry["items"] = [
           "components/editor/plugins/toolbar/font-family-toolbar-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/toolbar/font-format-toolbar-plugin.tsx",
-        target:
-          "components/editor/plugins/toolbar/font-format-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/font-size-toolbar-plugin.tsx",
-        target:
-          "components/editor/plugins/toolbar/font-size-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/history-toolbar-plugin.tsx",
-        target: "components/editor/plugins/toolbar/history-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/link-toolbar-plugin.tsx",
-        target: "components/editor/plugins/toolbar/link-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/subsuper-toolbar-plugin.tsx",
-        target: "components/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
+      
+      
       {
         path: "editor/plugins/toolbar/toolbar-plugin.tsx",
         target: "components/editor/plugins/toolbar/toolbar-plugin.tsx",
@@ -550,26 +473,14 @@ export const blocks: Registry["items"] = [
         target: "components/editor/plugins/floating-link-editor-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/floating-text-format-plugin.tsx",
-        target: "components/editor/plugins/floating-text-format-plugin.tsx",
-        type: "registry:component",
-      },
+   
       {
         path: "editor/plugins/images-plugin.tsx",
         target: "components/editor/plugins/images-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/keywords-plugin.tsx",
-        target: "components/editor/plugins/keywords-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/layout-plugin.tsx",
-        target: "components/editor/plugins/layout-plugin.tsx",
-        type: "registry:component",
-      },
+  
+      
       {
         path: "editor/plugins/link-plugin.tsx",
         target: "components/editor/plugins/link-plugin.tsx",
@@ -585,21 +496,10 @@ export const blocks: Registry["items"] = [
         target: "components/editor/plugins/mentions-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/tab-focus-plugin.tsx",
-        target: "components/editor/plugins/tab-focus-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/table-plugin.tsx",
-        target: "components/editor/plugins/table-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/typing-pref-plugin.tsx",
-        target: "components/editor/plugins/typing-pref-plugin.tsx",
-        type: "registry:component",
-      },
+    
+      
+  
+      
       {
         path: "editor/shared/can-use-dom.ts",
         target: "components/editor/shared/can-use-dom.ts",
@@ -768,11 +668,11 @@ export const blocks: Registry["items"] = [
       "@shadcn-editor/component-picker-menu-plugin",
       "@shadcn-editor/draggable-block-plugin",
       "@shadcn-editor/floating-text-format-plugin",
-      "@shadcn-editor/horizontal-rule-plugin",
-      "@shadcn-editor/image-plugin",
+  
+
       "@shadcn-editor/link-plugin",
-      "@shadcn-editor/markdown-plugin",
-      "@shadcn-editor/table-plugin",
+  
+  
     ],
     files: [
       {
@@ -795,22 +695,13 @@ export const blocks: Registry["items"] = [
         target: "components/blocks/editor-md/plugins.tsx",
         type: "registry:block",
       },
-      {
-        path: "editor/plugins/toolbar/horizontal-rule-toolbar-plugin.tsx",
-        target:
-          "components/editor/plugins/toolbar/horizontal-rule-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
+    
       {
         path: "editor/plugins/toolbar/image-toolbar-plugin.tsx",
         target: "components/editor/plugins/toolbar/image-toolbar-plugin.tsx",
         type: "registry:component",
       },
-      {
-        path: "editor/plugins/toolbar/table-toolbar-plugin.tsx",
-        target: "components/editor/plugins/toolbar/table-toolbar-plugin.tsx",
-        type: "registry:component",
-      },
+    
     ],
   },
 ]

@@ -2506,19 +2506,6 @@
       ]
     },
     {
-      "name": "subsuper-toolbar-plugin-demo",
-      "type": "registry:example",
-      "registryDependencies": [
-        "@shadcn-editor/subsuper-toolbar-plugin"
-      ],
-      "files": [
-        {
-          "path": "registry/new-york-v4/examples/subsuper-toolbar-plugin-demo.tsx",
-          "type": "registry:example"
-        }
-      ]
-    },
-    {
       "name": "tab-focus-plugin-demo",
       "type": "registry:example",
       "registryDependencies": [

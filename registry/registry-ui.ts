@@ -322,113 +322,11 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "max-length-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/utils", "@lexical/selection"],
-    registryDependencies: ["@shadcn-editor/actions-plugin"],
-    files: [
-      {
-        path: "editor/plugins/actions/max-length-plugin.tsx",
-        target: "components/editor/plugins/actions/max-length-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "counter-character-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/text"],
-    registryDependencies: ["@shadcn-editor/actions-plugin"],
-    files: [
-      {
-        path: "editor/plugins/actions/counter-character-plugin.tsx",
-        target:
-          "components/editor/plugins/actions/counter-character-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "speech-to-text-plugin",
-    type: "registry:ui",
-    registryDependencies: [
-      "button",
-      "tooltip",
-      "@shadcn-editor/actions-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/speech-to-text-plugin.tsx",
-        target: "components/editor/plugins/actions/speech-to-text-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/editor-hooks/use-report.ts",
-        target: "components/editor/editor-hooks/use-report.ts",
-        type: "registry:hook",
-      },
-      {
-        path: "editor/shared/can-use-dom.ts",
-        target: "components/editor/shared/can-use-dom.ts",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "share-content-plugin",
-    type: "registry:ui",
-    dependencies: ["sonner", "@lexical/file"],
-    registryDependencies: [
-      "button",
-      "tooltip",
-      "sonner",
-      "toast",
-      "@shadcn-editor/actions-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/share-content-plugin.tsx",
-        target: "components/editor/plugins/actions/share-content-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/utils/doc-serialization.ts",
-        target: "components/editor/utils/doc-serialization.ts",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "import-export-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/file"],
-    registryDependencies: [
-      "button",
-      "tooltip",
-      "@shadcn-editor/actions-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/import-export-plugin.tsx",
-        target: "components/editor/plugins/actions/import-export-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "markdown-toggle-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/markdown", "@lexical/code"],
-    registryDependencies: ["button", "@shadcn-editor/actions-plugin"],
-    files: [
-      {
-        path: "editor/plugins/actions/markdown-toggle-plugin.tsx",
-        target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
+
+
+  
+
+  
   {
     name: "clear-editor-plugin",
     type: "registry:ui",
@@ -446,39 +344,8 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "edit-mode-toggle-plugin",
-    type: "registry:ui",
-    registryDependencies: [
-      "button",
-      "tooltip",
-      "@shadcn-editor/actions-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-        target: "components/editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "tree-view-plugin",
-    type: "registry:ui",
-    registryDependencies: [
-      "button",
-      "dialog",
-      "scroll-area",
-      "@shadcn-editor/actions-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/tree-view-plugin.tsx",
-        target: "components/editor/plugins/actions/tree-view-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
+
+ 
   {
     name: "autocomplete-plugin",
     type: "registry:ui",
@@ -787,68 +654,14 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "floating-text-format-plugin",
-    type: "registry:ui",
-    dependencies: [
-      "@lexical/code",
-      "@lexical/link",
-      "@lexical/utils",
-      "@lexical/selection",
-    ],
-    registryDependencies: [
-      "separator",
-      "toggle-group",
-      "@shadcn-editor/rich-text-editor-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/floating-text-format-plugin.tsx",
-        target: "components/editor/plugins/floating-text-format-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/utils/get-dom-range-rect.ts",
-        target: "components/editor/utils/get-dom-range-rect.ts",
-        type: "registry:component",
-      },
-      {
-        path: "editor/utils/get-selected-node.ts",
-        target: "components/editor/utils/get-selected-node.ts",
-        type: "registry:component",
-      },
-      {
-        path: "editor/utils/set-floating-elem-position.ts",
-        target: "components/editor/utils/set-floating-elem-position.ts",
-        type: "registry:component",
-      },
-    ],
-  },
+
   {
     name: "hashtag-plugin",
     type: "registry:ui",
     dependencies: ["@lexical/hashtag"],
     registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
   },
-  {
-    name: "horizontal-rule-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/utils"],
-    registryDependencies: ["select", "@shadcn-editor/toolbar-plugin"],
-    files: [
-      {
-        path: "editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-        target:
-          "components/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/transformers/markdown-hr-transformer.ts",
-        target: "components/editor/transformers/markdown-hr-transformer.ts",
-        type: "registry:file",
-      },
-    ],
-  },
+ 
   {
     name: "image-plugin",
     type: "registry:ui",
@@ -901,52 +714,8 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "keywords-plugin",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [
-      {
-        path: "editor/plugins/keywords-plugin.tsx",
-        target: "components/editor/plugins/keywords-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/nodes/keyword-node.tsx",
-        target: "components/editor/nodes/keyword-node.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "layout-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/utils"],
-    registryDependencies: ["button", "select", "@shadcn-editor/toolbar-plugin"],
-    files: [
-      {
-        path: "editor/plugins/layout-plugin.tsx",
-        target: "components/editor/plugins/layout-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/nodes/layout-container-node.tsx",
-        target: "components/editor/nodes/layout-container-node.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/nodes/layout-item-node.tsx",
-        target: "components/editor/nodes/layout-item-node.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/block-insert/insert-columns-layout.tsx",
-        target:
-          "components/editor/plugins/toolbar/block-insert/insert-columns-layout.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
+ 
+ 
   {
     name: "link-plugin",
     type: "registry:ui",
@@ -979,127 +748,8 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "markdown-plugin",
-    type: "registry:ui",
-    dependencies: ["@lexical/markdown"],
-    registryDependencies: [
-      "button",
-      "@shadcn-editor/actions-plugin",
-      "@shadcn-editor/rich-text-editor-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/actions/markdown-toggle-plugin.tsx",
-        target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "mention-plugin",
-    type: "registry:ui",
-    registryDependencies: ["command", "@shadcn-editor/rich-text-editor-plugin"],
-    files: [
-      {
-        path: "editor/plugins/mentions-plugin.tsx",
-        target: "components/editor/plugins/mentions-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/nodes/mention-node.ts",
-        target: "components/editor/nodes/mention-node.ts",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "table-plugin",
-    type: "registry:ui",
-    dependencies: [
-      "lodash",
-      "react-colorful",
-      "@lexical/table",
-      "@lexical/utils",
-      "@lexical/markdown",
-    ],
-    devDependencies: ["@types/lodash"],
-    registryDependencies: [
-      "button",
-      "command",
-      "dialog",
-      "input",
-      "label",
-      "popover",
-      "select",
-      "@shadcn-editor/toolbar-plugin",
-    ],
-    files: [
-      {
-        path: "editor/plugins/table-plugin.tsx",
-        target: "components/editor/plugins/table-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/block-insert-plugin.tsx",
-        target: "components/editor/plugins/toolbar/block-insert-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/plugins/toolbar/block-insert/insert-table.tsx",
-        target:
-          "components/editor/plugins/toolbar/block-insert/insert-table.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/editor-hooks/use-modal.tsx",
-        target: "components/editor/editor-hooks/use-modal.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/editor-hooks/use-debounce.ts",
-        target: "components/editor/editor-hooks/use-debounce.ts",
-        type: "registry:component",
-      },
-      {
-        path: "editor/shared/invariant.ts",
-        target: "components/editor/shared/invariant.ts",
-        type: "registry:component",
-      },
-      {
-        path: "editor/transformers/markdown-table-transformer.ts",
-        target: "components/editor/transformers/markdown-table-transformer.ts",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "tab-focus-plugin",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [
-      {
-        path: "editor/plugins/tab-focus-plugin.tsx",
-        target: "components/editor/plugins/tab-focus-plugin.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
-    name: "typing-pref-plugin",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [
-      {
-        path: "editor/plugins/typing-pref-plugin.tsx",
-        target: "components/editor/plugins/typing-pref-plugin.tsx",
-        type: "registry:component",
-      },
-      {
-        path: "editor/editor-hooks/use-report.ts",
-        target: "components/editor/editor-hooks/use-report.ts",
-        type: "registry:component",
-      },
-    ],
-  },
+  
+
+  
+
 ]

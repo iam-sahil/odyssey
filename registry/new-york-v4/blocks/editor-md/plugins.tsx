@@ -10,12 +10,11 @@ import { CheckListPlugin } from "@lexical/react/LexicalCheckListPlugin"
 import { ClickableLinkPlugin } from "@lexical/react/LexicalClickableLinkPlugin"
 import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary"
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin"
-import { HorizontalRulePlugin } from "@lexical/react/LexicalHorizontalRulePlugin"
 import { ListPlugin } from "@lexical/react/LexicalListPlugin"
 import { MarkdownShortcutPlugin } from "@lexical/react/LexicalMarkdownShortcutPlugin"
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin"
 import { TabIndentationPlugin } from "@lexical/react/LexicalTabIndentationPlugin"
-import { TablePlugin } from "@lexical/react/LexicalTablePlugin"
+
 
 import { ContentEditable } from "@/registry/new-york-v4/editor/editor-ui/content-editable"
 import { AutoLinkPlugin } from "@/registry/new-york-v4/editor/plugins/auto-link-plugin"
@@ -24,7 +23,6 @@ import { CodeHighlightPlugin } from "@/registry/new-york-v4/editor/plugins/code-
 import { ComponentPickerMenuPlugin } from "@/registry/new-york-v4/editor/plugins/component-picker-menu-plugin"
 import { DraggableBlockPlugin } from "@/registry/new-york-v4/editor/plugins/draggable-block-plugin"
 import { FloatingLinkEditorPlugin } from "@/registry/new-york-v4/editor/plugins/floating-link-editor-plugin"
-import { FloatingTextFormatToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/floating-text-format-plugin"
 import { ImagesPlugin } from "@/registry/new-york-v4/editor/plugins/images-plugin"
 import { LinkPlugin } from "@/registry/new-york-v4/editor/plugins/link-plugin"
 import { ListMaxIndentLevelPlugin } from "@/registry/new-york-v4/editor/plugins/list-max-indent-level-plugin"
@@ -48,13 +46,9 @@ import { FormatNumberedList } from "@/registry/new-york-v4/editor/plugins/toolba
 import { FormatParagraph } from "@/registry/new-york-v4/editor/plugins/toolbar/block-format/format-paragraph"
 import { FormatQuote } from "@/registry/new-york-v4/editor/plugins/toolbar/block-format/format-quote"
 import { CodeLanguageToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/code-language-toolbar-plugin"
-import { ElementFormatToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/element-format-toolbar-plugin"
-import { FontFormatToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/font-format-toolbar-plugin"
 import { HistoryToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/history-toolbar-plugin"
-import { HorizontalRuleToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/horizontal-rule-toolbar-plugin"
 import { ImageToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/image-toolbar-plugin"
 import { LinkToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/link-toolbar-plugin"
-import { TableToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/table-toolbar-plugin"
 import { ToolbarPlugin } from "@/registry/new-york-v4/editor/plugins/toolbar/toolbar-plugin"
 import { HR } from "@/registry/new-york-v4/editor/transformers/markdown-hr-transformer"
 import { IMAGE } from "@/registry/new-york-v4/editor/transformers/markdown-image-transformer"
@@ -92,13 +86,10 @@ export function Plugins({}) {
               <CodeLanguageToolbarPlugin />
             ) : (
               <>
-                <ElementFormatToolbarPlugin separator={false} />
-                <FontFormatToolbarPlugin />
                 <LinkToolbarPlugin setIsLinkEditMode={setIsLinkEditMode} />
 
-                <HorizontalRuleToolbarPlugin />
                 <ImageToolbarPlugin />
-                <TableToolbarPlugin />
+           
               </>
             )}
           </div>
@@ -160,16 +151,9 @@ export function Plugins({}) {
           ]}
         />
 
-        <FloatingTextFormatToolbarPlugin
-          anchorElem={floatingAnchorElem}
-          setIsLinkEditMode={setIsLinkEditMode}
-        />
-
-        <HorizontalRulePlugin />
 
         <ImagesPlugin />
 
-        <TablePlugin />
 
         <DraggableBlockPlugin anchorElem={floatingAnchorElem} />
 

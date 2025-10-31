@@ -59,7 +59,7 @@ export default function BlocksLayout({
         </PageActions>
       </PageHeader>
       <div className="container-wrapper section-soft flex-1 md:py-12">
-        <div className="container">{children}</div>
+        <div className="container"></div>
       </div>
     </>
   )

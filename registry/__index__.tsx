@@ -142,124 +142,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "font-family-toolbar-plugin": {
-    name: "font-family-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["select","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-family-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-family-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-update-toolbar.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-update-toolbar.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/font-family-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-size-toolbar-plugin": {
-    name: "font-size-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","input","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-size-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-size-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-update-toolbar.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-update-toolbar.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/font-size-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-format-toolbar-plugin": {
-    name: "font-format-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["toggle","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-format-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-format-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-update-toolbar.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-update-toolbar.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/font-format-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "subsuper-toolbar-plugin": {
-    name: "subsuper-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["toggle-group","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-update-toolbar.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-update-toolbar.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-color-toolbar-plugin": {
-    name: "font-color-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","input","popover","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-color-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-color-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-background-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-background-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-ui/colorpicker.tsx",
-      type: "registry:ui",
-      target: "components/editor/editor-ui/colorpicker.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-update-toolbar.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-update-toolbar.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/font-color-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
   "element-format-toolbar-plugin": {
     name: "element-format-toolbar-plugin",
     description: "",
@@ -286,24 +169,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "clear-formatting-toolbar-plugin": {
-    name: "clear-formatting-toolbar-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+  
   "link-toolbar-plugin": {
     name: "link-toolbar-plugin",
     description: "",
@@ -352,126 +218,13 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "max-length-plugin": {
-    name: "max-length-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/max-length-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/max-length-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/max-length-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "counter-character-plugin": {
-    name: "counter-character-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/counter-character-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/counter-character-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/counter-character-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "speech-to-text-plugin": {
-    name: "speech-to-text-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","tooltip","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/speech-to-text-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/speech-to-text-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-report.ts",
-      type: "registry:hook",
-      target: "components/editor/editor-hooks/use-report.ts"
-    },{
-      path: "registry/new-york-v4/editor/shared/can-use-dom.ts",
-      type: "registry:component",
-      target: "components/editor/shared/can-use-dom.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/speech-to-text-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "share-content-plugin": {
-    name: "share-content-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","tooltip","sonner","toast","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/share-content-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/share-content-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/utils/doc-serialization.ts",
-      type: "registry:component",
-      target: "components/editor/utils/doc-serialization.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/share-content-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "import-export-plugin": {
-    name: "import-export-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","tooltip","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/import-export-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/import-export-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/import-export-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "markdown-toggle-plugin": {
-    name: "markdown-toggle-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/markdown-toggle-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/markdown-toggle-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+  
+  
+
+
+  
+ 
+ 
   "clear-editor-plugin": {
     name: "clear-editor-plugin",
     description: "",
@@ -490,42 +243,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "edit-mode-toggle-plugin": {
-    name: "edit-mode-toggle-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","tooltip","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/edit-mode-toggle-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/edit-mode-toggle-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "tree-view-plugin": {
-    name: "tree-view-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","dialog","scroll-area","@shadcn-editor/actions-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/tree-view-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/tree-view-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/tree-view-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
+ 
   "autocomplete-plugin": {
     name: "autocomplete-plugin",
     description: "",
@@ -806,58 +525,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "floating-text-format-plugin": {
-    name: "floating-text-format-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["separator","toggle-group","@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/floating-text-format-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/floating-text-format-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/utils/get-dom-range-rect.ts",
-      type: "registry:component",
-      target: "components/editor/utils/get-dom-range-rect.ts"
-    },{
-      path: "registry/new-york-v4/editor/utils/get-selected-node.ts",
-      type: "registry:component",
-      target: "components/editor/utils/get-selected-node.ts"
-    },{
-      path: "registry/new-york-v4/editor/utils/set-floating-elem-position.ts",
-      type: "registry:component",
-      target: "components/editor/utils/set-floating-elem-position.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/floating-text-format-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "horizontal-rule-plugin": {
-    name: "horizontal-rule-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["select","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx"
-    },{
-      path: "registry/new-york-v4/editor/transformers/markdown-hr-transformer.ts",
-      type: "registry:file",
-      target: "components/editor/transformers/markdown-hr-transformer.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
+
   "image-plugin": {
     name: "image-plugin",
     description: "",
@@ -900,58 +569,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "keywords-plugin": {
-    name: "keywords-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/keywords-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/keywords-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/nodes/keyword-node.tsx",
-      type: "registry:component",
-      target: "components/editor/nodes/keyword-node.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/keywords-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "layout-plugin": {
-    name: "layout-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","select","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/layout-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/layout-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/nodes/layout-container-node.tsx",
-      type: "registry:component",
-      target: "components/editor/nodes/layout-container-node.tsx"
-    },{
-      path: "registry/new-york-v4/editor/nodes/layout-item-node.tsx",
-      type: "registry:component",
-      target: "components/editor/nodes/layout-item-node.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-columns-layout.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/block-insert/insert-columns-layout.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/layout-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
+
   "link-plugin": {
     name: "link-plugin",
     description: "",
@@ -986,128 +605,11 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "markdown-plugin": {
-    name: "markdown-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","@shadcn-editor/actions-plugin","@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/actions/markdown-toggle-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/actions/markdown-toggle-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "mention-plugin": {
-    name: "mention-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["command","@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/mentions-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/mentions-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/nodes/mention-node.ts",
-      type: "registry:component",
-      target: "components/editor/nodes/mention-node.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/mentions-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "table-plugin": {
-    name: "table-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","command","dialog","input","label","popover","select","@shadcn-editor/toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/table-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/table-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/block-insert-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/block-insert-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-table.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/block-insert/insert-table.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-modal.tsx",
-      type: "registry:component",
-      target: "components/editor/editor-hooks/use-modal.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-debounce.ts",
-      type: "registry:component",
-      target: "components/editor/editor-hooks/use-debounce.ts"
-    },{
-      path: "registry/new-york-v4/editor/shared/invariant.ts",
-      type: "registry:component",
-      target: "components/editor/shared/invariant.ts"
-    },{
-      path: "registry/new-york-v4/editor/transformers/markdown-table-transformer.ts",
-      type: "registry:component",
-      target: "components/editor/transformers/markdown-table-transformer.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/table-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "tab-focus-plugin": {
-    name: "tab-focus-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/tab-focus-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/tab-focus-plugin.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/tab-focus-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "typing-pref-plugin": {
-    name: "typing-pref-plugin",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["@shadcn-editor/rich-text-editor-plugin"],
-    files: [{
-      path: "registry/new-york-v4/editor/plugins/typing-pref-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/typing-pref-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/editor-hooks/use-report.ts",
-      type: "registry:component",
-      target: "components/editor/editor-hooks/use-report.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/editor/plugins/typing-pref-plugin.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
+
+  
+
+
   "editor": {
     name: "editor",
     description: "",
@@ -1231,54 +733,15 @@ export const Index: Record<string, any> = {
       path: "registry/new-york-v4/editor/nodes/layout-item-node.tsx",
       type: "registry:file",
       target: "components/editor/nodes/layout-item-node.tsx"
-    },{
-      path: "registry/new-york-v4/editor/nodes/mention-node.ts",
-      type: "registry:file",
-      target: "components/editor/nodes/mention-node.ts"
-    },{
+    },
+    {
       path: "registry/new-york-v4/editor/plugins/actions/actions-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/actions/actions-plugin.tsx"
     },{
-      path: "registry/new-york-v4/editor/plugins/actions/character-limit-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/character-limit-plugin.tsx"
-    },{
       path: "registry/new-york-v4/editor/plugins/actions/clear-editor-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/actions/clear-editor-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/counter-character-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/counter-character-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/edit-mode-toggle-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/edit-mode-toggle-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/import-export-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/import-export-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/markdown-toggle-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/markdown-toggle-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/max-length-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/max-length-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/share-content-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/share-content-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/speech-to-text-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/speech-to-text-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/actions/tree-view-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/actions/tree-view-plugin.tsx"
     },{
       path: "registry/new-york-v4/editor/plugins/embeds/auto-embed-plugin.tsx",
       type: "registry:component",
@@ -1388,10 +851,6 @@ export const Index: Record<string, any> = {
       type: "registry:component",
       target: "components/editor/plugins/toolbar/block-insert/insert-embeds.tsx"
     },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/block-insert/insert-horizontal-rule.tsx"
-    },{
       path: "registry/new-york-v4/editor/plugins/toolbar/block-insert/insert-image.tsx",
       type: "registry:component",
       target: "components/editor/plugins/toolbar/block-insert/insert-image.tsx"
@@ -1407,11 +866,7 @@ export const Index: Record<string, any> = {
       path: "registry/new-york-v4/editor/plugins/toolbar/block-insert-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/toolbar/block-insert-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/clear-formatting-toolbar-plugin.tsx"
-    },{
+    },,{
       path: "registry/new-york-v4/editor/plugins/toolbar/code-language-toolbar-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/toolbar/code-language-toolbar-plugin.tsx"
@@ -1420,26 +875,6 @@ export const Index: Record<string, any> = {
       type: "registry:component",
       target: "components/editor/plugins/toolbar/element-format-toolbar-plugin.tsx"
     },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-background-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-background-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-color-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-color-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-family-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-family-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-format-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-format-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/font-size-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/font-size-toolbar-plugin.tsx"
-    },{
       path: "registry/new-york-v4/editor/plugins/toolbar/history-toolbar-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/toolbar/history-toolbar-plugin.tsx"
@@ -1447,10 +882,6 @@ export const Index: Record<string, any> = {
       path: "registry/new-york-v4/editor/plugins/toolbar/link-toolbar-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/toolbar/link-toolbar-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/subsuper-toolbar-plugin.tsx"
     },{
       path: "registry/new-york-v4/editor/plugins/toolbar/toolbar-plugin.tsx",
       type: "registry:component",
@@ -1500,21 +931,9 @@ export const Index: Record<string, any> = {
       type: "registry:component",
       target: "components/editor/plugins/floating-link-editor-plugin.tsx"
     },{
-      path: "registry/new-york-v4/editor/plugins/floating-text-format-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/floating-text-format-plugin.tsx"
-    },{
       path: "registry/new-york-v4/editor/plugins/images-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/images-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/keywords-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/keywords-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/layout-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/layout-plugin.tsx"
     },{
       path: "registry/new-york-v4/editor/plugins/link-plugin.tsx",
       type: "registry:component",
@@ -1523,22 +942,6 @@ export const Index: Record<string, any> = {
       path: "registry/new-york-v4/editor/plugins/list-max-indent-level-plugin.tsx",
       type: "registry:component",
       target: "components/editor/plugins/list-max-indent-level-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/mentions-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/mentions-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/tab-focus-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/tab-focus-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/table-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/table-plugin.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/typing-pref-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/typing-pref-plugin.tsx"
     },{
       path: "registry/new-york-v4/editor/shared/can-use-dom.ts",
       type: "registry:file",
@@ -1672,7 +1075,7 @@ export const Index: Record<string, any> = {
     name: "editor-md",
     description: "",
     type: "registry:block",
-    registryDependencies: ["@shadcn-editor/editor","@shadcn-editor/rich-text-editor-plugin","@shadcn-editor/block-format-toolbar-plugin","@shadcn-editor/element-format-toolbar-plugin","@shadcn-editor/font-format-toolbar-plugin","@shadcn-editor/history-toolbar-plugin","@shadcn-editor/link-toolbar-plugin","@shadcn-editor/code-plugin","@shadcn-editor/component-picker-menu-plugin","@shadcn-editor/draggable-block-plugin","@shadcn-editor/floating-text-format-plugin","@shadcn-editor/horizontal-rule-plugin","@shadcn-editor/image-plugin","@shadcn-editor/link-plugin","@shadcn-editor/markdown-plugin","@shadcn-editor/table-plugin"],
+    registryDependencies: ["@shadcn-editor/editor","@shadcn-editor/rich-text-editor-plugin","@shadcn-editor/block-format-toolbar-plugin","@shadcn-editor/element-format-toolbar-plugin","@shadcn-editor/font-format-toolbar-plugin","@shadcn-editor/history-toolbar-plugin","@shadcn-editor/link-toolbar-plugin","@shadcn-editor/code-plugin","@shadcn-editor/component-picker-menu-plugin","@shadcn-editor/draggable-block-plugin","@shadcn-editor/image-plugin","@shadcn-editor/link-plugin","@shadcn-editor/markdown-plugin","@shadcn-editor/table-plugin"],
     files: [{
       path: "registry/new-york-v4/blocks/editor-md/page.tsx",
       type: "registry:page",
@@ -1689,10 +1092,6 @@ export const Index: Record<string, any> = {
       path: "registry/new-york-v4/blocks/editor-md/plugins.tsx",
       type: "registry:block",
       target: "components/blocks/editor-md/plugins.tsx"
-    },{
-      path: "registry/new-york-v4/editor/plugins/toolbar/horizontal-rule-toolbar-plugin.tsx",
-      type: "registry:component",
-      target: "components/editor/plugins/toolbar/horizontal-rule-toolbar-plugin.tsx"
     },{
       path: "registry/new-york-v4/editor/plugins/toolbar/image-toolbar-plugin.tsx",
       type: "registry:component",
@@ -1836,24 +1235,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "clear-formatting-toolbar-plugin-demo": {
-    name: "clear-formatting-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/clear-formatting-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/clear-formatting-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/clear-formatting-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
   "code-plugin-demo": {
     name: "code-plugin-demo",
     description: "",
@@ -1908,24 +1290,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "counter-character-plugin-demo": {
-    name: "counter-character-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/counter-character-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/counter-character-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/counter-character-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
   "drag-drop-paste-plugin-demo": {
     name: "drag-drop-paste-plugin-demo",
     description: "",
@@ -1962,24 +1327,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "edit-mode-toggle-plugin-demo": {
-    name: "edit-mode-toggle-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/edit-mode-toggle-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/edit-mode-toggle-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/edit-mode-toggle-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
   "element-format-toolbar-plugin-demo": {
     name: "element-format-toolbar-plugin-demo",
     description: "",
@@ -2016,96 +1364,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "floating-text-format-plugin-demo": {
-    name: "floating-text-format-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/floating-text-format-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/floating-text-format-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/floating-text-format-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-color-toolbar-plugin-demo": {
-    name: "font-color-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/font-color-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/font-color-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/font-color-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-family-toolbar-plugin-demo": {
-    name: "font-family-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/font-family-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/font-family-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/font-family-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-format-toolbar-plugin-demo": {
-    name: "font-format-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/font-format-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/font-format-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/font-format-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "font-size-toolbar-plugin-demo": {
-    name: "font-size-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/font-size-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/font-size-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/font-size-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+  
+
   "hashtag-plugin-demo": {
     name: "hashtag-plugin-demo",
     description: "",
@@ -2142,24 +1402,7 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "horizontal-rule-plugin-demo": {
-    name: "horizontal-rule-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/horizontal-rule-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/horizontal-rule-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/horizontal-rule-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
   "image-plugin-demo": {
     name: "image-plugin-demo",
     description: "",
@@ -2178,60 +1421,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "import-export-plugin-demo": {
-    name: "import-export-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/import-export-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/import-export-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/import-export-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "keywords-plugin-demo": {
-    name: "keywords-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/keywords-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/keywords-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/keywords-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "layout-plugin-demo": {
-    name: "layout-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/layout-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/layout-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/layout-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
+
   "link-plugin-demo": {
     name: "link-plugin-demo",
     description: "",
@@ -2268,168 +1459,14 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "markdown-plugin-demo": {
-    name: "markdown-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/markdown-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/markdown-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/markdown-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "markdown-toggle-plugin-demo": {
-    name: "markdown-toggle-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/markdown-toggle-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/markdown-toggle-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/markdown-toggle-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "max-length-plugin-demo": {
-    name: "max-length-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/max-length-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/max-length-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/max-length-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "mention-plugin-demo": {
-    name: "mention-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/mention-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/mention-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/mention-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "share-content-plugin-demo": {
-    name: "share-content-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/share-content-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/share-content-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/share-content-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "speech-to-text-plugin-demo": {
-    name: "speech-to-text-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/speech-to-text-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/speech-to-text-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/speech-to-text-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "subsuper-toolbar-plugin-demo": {
-    name: "subsuper-toolbar-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/subsuper-toolbar-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/subsuper-toolbar-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/subsuper-toolbar-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "tab-focus-plugin-demo": {
-    name: "tab-focus-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/tab-focus-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/tab-focus-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/tab-focus-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "table-plugin-demo": {
-    name: "table-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/table-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/table-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/table-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+
+
+
+ 
+
+
+
+
   "toolbar-plugin-demo": {
     name: "toolbar-plugin-demo",
     description: "",
@@ -2448,42 +1485,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "tree-view-plugin-demo": {
-    name: "tree-view-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/tree-view-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/tree-view-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/tree-view-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "typing-pref-plugin-demo": {
-    name: "typing-pref-plugin-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["@shadcn-editor/typing-pref-plugin"],
-    files: [{
-      path: "registry/new-york-v4/examples/typing-pref-plugin-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/new-york-v4/examples/typing-pref-plugin-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
+ 
+
   "test-component-demo": {
     name: "test-component-demo",
     description: "",
