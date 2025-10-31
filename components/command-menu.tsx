@@ -4,7 +4,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { IconArrowRight } from "@tabler/icons-react"
-import { CornerDownLeftIcon, Sparkles, SquareDashedIcon } from "lucide-react"
+import { CornerDownLeftIcon, SquareDashedIcon } from "lucide-react"
 
 import { type Color, type ColorPalette } from "@/lib/colors"
 import { showMcpDocs } from "@/lib/flags"
