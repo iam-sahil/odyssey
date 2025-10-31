@@ -159,6 +159,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/plugins/autocomplete",
           items: [],
         },
+          {
+          title: "TestComponent",
+          href: "/docs/plugins/test-component",
+          items: [],
+        },
         {
           title: "Auto Embed",
           href: "/docs/plugins/auto-embed",

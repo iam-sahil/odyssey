@@ -474,4 +474,14 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "test-component-demo",
+    type: "registry:example",
+    files: [
+      {
+        path: "examples/test-component-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

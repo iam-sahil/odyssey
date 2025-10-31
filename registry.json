@@ -2582,6 +2582,16 @@
           "type": "registry:example"
         }
       ]
+    },
+    {
+      "name": "test-component-demo",
+      "type": "registry:example",
+      "files": [
+        {
+          "path": "registry/new-york-v4/examples/test-component-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "auto-focus-plugin",
-  "type": "registry:ui",
-  "registryDependencies": [
-    "@shadcn-editor/rich-text-editor-plugin"
-  ]
-}
