@@ -5,7 +5,6 @@ import { useQueryState, parseAsString } from 'nuqs';
 import { index } from '@/__registry__';
 import { Highlight } from '@/registry/primitives/effects/highlight';
 import { AnimateIcon, staticAnimations } from '@/registry/icons/icon';
-import { X } from '@/registry/icons/x';
 import { Input } from '@workspace/ui/components/ui/input';
 import { cn } from '@workspace/ui/lib/utils';
 import { useEffect, useMemo, useState } from 'react';
@@ -34,9 +33,7 @@ import {
   TooltipTrigger,
 } from '@/registry/components/animate/tooltip';
 import { Button } from '@workspace/ui/components/ui/button';
-import { RotateCcw } from '@/registry/icons/rotate-ccw';
-import { InfinityIcon } from 'lucide-react';
-import { Check } from '@/registry/icons/check';
+import { Check, InfinityIcon, RotateCcw, X } from 'lucide-react';
 
 const staticAnimationsLength = Object.keys(staticAnimations).length;
 
@@ -226,7 +223,7 @@ const CheckBadge = ({
       layout
       {...props}
     >
-      {isActive && <Check animate className="size-3.5 stroke-3" />}
+      {isActive && <Check className="size-3.5 stroke-3" />}
       <motion.span layout="preserve-aspect">{children}</motion.span>
     </motion.button>
   );
