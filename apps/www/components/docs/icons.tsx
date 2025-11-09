@@ -26,12 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@workspace/ui/components/ui/select';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/registry/components/animate/tooltip';
+
 import { Button } from '@workspace/ui/components/ui/button';
 import { Check, InfinityIcon, RotateCcw, X } from 'lucide-react';
 
@@ -362,63 +357,57 @@ export const Icons = () => {
       <div>
         {searchedIcons.length ? (
           <div className="grid lg:grid-cols-11 2xl:grid-cols-14 sm:grid-cols-9 xs:grid-cols-7 grid-cols-5 gap-4 mt-6">
-            <TooltipProvider>
-              <Highlight
-                hover
-                className="absolute inset-0 ring-2 ring-foreground bg-transparent rounded-lg -z-1"
-              >
-                {searchedIcons.map((icon) => {
-                  const animationsLength = Object.keys(
-                    icon?.component?.animations ?? {},
-                  ).length;
-                  const totalAnimationsLength =
-                    staticAnimationsLength + animationsLength;
-                  return (
-                    <Tooltip side="bottom" sideOffset={14} key={icon.name}>
-                      <TooltipTrigger>
-                        <div>
-                          <AnimateIcon asChild animateOnHover>
-                            <button
-                              data-value={icon.name}
-                              onClick={() => {
-                                setActiveIconWithoutPrefix(
-                                  icon.name.replace('icons-', ''),
-                                );
-                              }}
-                              className="relative group flex items-center justify-center size-full aspect-square rounded-lg p-3.5"
-                            >
-                              {icon?.component && (
-                                <icon.component className="text-current size-full" />
-                              )}
-                              <div
-                                className={cn(
-                                  'absolute inset-0 bg-muted rounded-lg -z-2 transition-colors duration-200',
-                                  activeIcon === icon.name &&
-                                    'bg-foreground/20',
-                                )}
-                              />
+            <Highlight
+              hover
+              className="absolute inset-0 ring-2 ring-foreground bg-transparent rounded-lg -z-1"
+            >
+              {searchedIcons.map((icon) => {
+                const animationsLength = Object.keys(
+                  icon?.component?.animations ?? {},
+                ).length;
+                const totalAnimationsLength =
+                  staticAnimationsLength + animationsLength;
+                return (
+                  <div className="">
+                    {' '}
+                    <div>
+                      <AnimateIcon asChild animateOnHover>
+                        <button
+                          data-value={icon.name}
+                          onClick={() => {
+                            setActiveIconWithoutPrefix(
+                              icon.name.replace('icons-', ''),
+                            );
+                          }}
+                          className="relative group flex items-center justify-center size-full aspect-square rounded-lg p-3.5"
+                        >
+                          {icon?.component && (
+                            <icon.component className="text-current size-full" />
+                          )}
+                          <div
+                            className={cn(
+                              'absolute inset-0 bg-muted rounded-lg -z-2 transition-colors duration-200',
+                              activeIcon === icon.name && 'bg-foreground/20',
+                            )}
+                          />
 
-                              {newIcons.includes(icon.name) && (
-                                <div className="absolute -top-1 -right-1 size-2.5 border border-background bg-foreground rounded-full" />
-                              )}
+                          {newIcons.includes(icon.name) && (
+                            <div className="absolute -top-1 -right-1 size-2.5 border border-background bg-foreground rounded-full" />
+                          )}
 
-                              <div className="absolute z-10 -bottom-2.5 -right-2.5 flex items-center justify-center text-muted-foreground font-medium size-5 bg-background border group-hover:border-foreground group-hover:ring group-hover:ring-foreground transition-colors duration-200 rounded-full">
-                                <span className="text-[11px] leading-none">
-                                  {totalAnimationsLength}
-                                </span>
-                              </div>
-                            </button>
-                          </AnimateIcon>
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{icon.name.replace('icons-', '')}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  );
-                })}
-              </Highlight>
-            </TooltipProvider>
+                          <div className="absolute z-10 -bottom-2.5 -right-2.5 flex items-center justify-center text-muted-foreground font-medium size-5 bg-background border group-hover:border-foreground group-hover:ring group-hover:ring-foreground transition-colors duration-200 rounded-full">
+                            <span className="text-[11px] leading-none">
+                              {totalAnimationsLength}
+                            </span>
+                          </div>
+                        </button>
+                      </AnimateIcon>
+                    </div>
+                    <p>{icon.name.replace('icons-', '')}</p>
+                  </div>
+                );
+              })}
+            </Highlight>
           </div>
         ) : (
           <div className="flex items-center justify-center h-[200px]">
