@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/demo/primitives/effects/fade/index.tsx",
-      "content": "import { Fade } from '@/components/animate-ui/primitives/effects/fade';\n\ntype FadeDemoProps = {\n  delay?: number;\n  initialOpacity?: number;\n  opacity?: number;\n};\n\nexport default function FadeDemo({\n  delay = 0,\n  initialOpacity = 0,\n  opacity = 1,\n}: FadeDemoProps) {\n  return (\n    <Fade\n      delay={delay}\n      initialOpacity={initialOpacity}\n      opacity={opacity}\n      className=\"px-6 py-4 bg-accent\"\n    >\n      Fade\n    </Fade>\n  );\n}\n",
+      "content": "import { Fade } from '@/components/odyssey/primitives/effects/fade';\n\ntype FadeDemoProps = {\n  delay?: number;\n  initialOpacity?: number;\n  opacity?: number;\n};\n\nexport default function FadeDemo({\n  delay = 0,\n  initialOpacity = 0,\n  opacity = 1,\n}: FadeDemoProps) {\n  return (\n    <Fade\n      delay={delay}\n      initialOpacity={initialOpacity}\n      opacity={opacity}\n      className=\"px-6 py-4 bg-accent\"\n    >\n      Fade\n    </Fade>\n  );\n}\n",
       "type": "registry:ui",
       "target": "components/animate-ui/demo/primitives/effects/fade.tsx"
     }

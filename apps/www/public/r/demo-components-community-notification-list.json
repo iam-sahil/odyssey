@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/demo/components/community/notification-list/index.tsx",
-      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { NotificationList } from '@/components/animate-ui/components/community/notification-list';\n\nexport const NotificationListDemo = () => <NotificationList />;\n",
+      "content": "'use client';\n\nimport * as React from 'react';\n\nimport { NotificationList } from '@/components/odyssey/components/community/notification-list';\n\nexport const NotificationListDemo = () => <NotificationList />;\n",
       "type": "registry:ui",
       "target": "components/animate-ui/demo/components/community/notification-list.tsx"
     }

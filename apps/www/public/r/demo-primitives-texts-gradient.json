@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/demo/primitives/texts/gradient/index.tsx",
-      "content": "import { GradientText } from '@/components/animate-ui/primitives/texts/gradient';\n\ninterface GradientTextDemoProps {\n  neon: boolean;\n}\n\nexport const GradientTextDemo = ({ neon }: GradientTextDemoProps) => {\n  return (\n    <GradientText\n      className=\"text-4xl font-semibold\"\n      text=\"Gradient Text\"\n      neon={neon}\n    />\n  );\n};\n",
+      "content": "import { GradientText } from '@/components/odyssey/primitives/texts/gradient';\n\ninterface GradientTextDemoProps {\n  neon: boolean;\n}\n\nexport const GradientTextDemo = ({ neon }: GradientTextDemoProps) => {\n  return (\n    <GradientText\n      className=\"text-4xl font-semibold\"\n      text=\"Gradient Text\"\n      neon={neon}\n    />\n  );\n};\n",
       "type": "registry:ui",
       "target": "components/animate-ui/demo/primitives/texts/gradient.tsx"
     }

@@ -25,7 +25,7 @@ function replaceRegistryPaths(inputStr: string): string {
       if (rest.startsWith('hooks/')) {
         return `${quote}@/${rest}${quote}`;
       }
-      return `${quote}@/components/animate-ui/${rest}${quote}`;
+      return `${quote}@/components/odyssey/${rest}${quote}`;
     } else if (content.startsWith('@workspace/ui/')) {
       const rest = content.slice('@workspace/ui/'.length);
       return `${quote}@/${rest}${quote}`;
@@ -197,7 +197,7 @@ export const index: Record<string, any> = {`;
     })()`
         : 'null'
     },
-    command: '@animate-ui/${item.name}',
+    command: '@odyssey/${item.name}',
   },`;
   }
 
@@ -243,7 +243,6 @@ async function buildRegistry() {
     });
   });
 
-  // 3. Replace `@/registry/animate-ui/` with `@/components/animate-ui/` in all files
   const files = await fs.readdir(path.join(process.cwd(), 'public/r'));
 
   await Promise.all(

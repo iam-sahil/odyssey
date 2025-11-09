@@ -131,6 +131,21 @@ export function ComponentSearch({ open, onOpenChange }: ComponentSearchProps) {
         const response = await fetch('/r/registry.json');
         const data = await response.json();
 
+        // Load meta.json to cross-reference available components
+        const metaResponse = await fetch('/api/components-meta');
+        const metaData = await metaResponse.json();
+
+        // Extract component paths from meta.json (e.g., "animate/github-stars-wheel")
+        const availableComponents = new Set<string>();
+        if (metaData.pages && Array.isArray(metaData.pages)) {
+          metaData.pages.forEach((page: string) => {
+            // Skip separator lines like "---Animate UI---"
+            if (!page.startsWith('---')) {
+              availableComponents.add(page);
+            }
+          });
+        }
+
         const components: SearchResult[] = [];
 
         // Process registry items - only components folder
@@ -144,20 +159,24 @@ export function ComponentSearch({ open, onOpenChange }: ComponentSearchProps) {
               );
               if (pathMatch) {
                 const rest = pathMatch[1]; // e.g. animate/github-stars-wheel
-                const documentationPath = `/docs/components/${rest}`;
-                const category = rest.split('/')[0] || 'components';
-                const shortName = item.name.replace(/^components-[^-]+-/, '');
-                const installCommand = `npx shadcn add @odyssey/${shortName}`;
 
-                components.push({
-                  name: item.name,
-                  title: item.title || item.name,
-                  description: item.description || '',
-                  path: documentationPath,
-                  category,
-                  type: 'component',
-                  installCommand,
-                });
+                // Only include if it exists in meta.json
+                if (availableComponents.has(rest)) {
+                  const documentationPath = `/docs/components/${rest}`;
+                  const category = rest.split('/')[0] || 'components';
+                  const shortName = item.name.replace(/^components-[^-]+-/, '');
+                  const installCommand = `npx shadcn add @odyssey/${shortName}`;
+
+                  components.push({
+                    name: item.name,
+                    title: item.title || item.name,
+                    description: item.description || '',
+                    path: documentationPath,
+                    category,
+                    type: 'component',
+                    installCommand,
+                  });
+                }
               }
             }
           });
@@ -380,20 +399,22 @@ export function ComponentSearch({ open, onOpenChange }: ComponentSearchProps) {
           'animate-in fade-in-0 slide-in-from-top-4 duration-200',
         )}
       >
-        <div className="overflow-hidden rounded-lg border bg-background shadow-2xl p-2">
+        <div className="overflow-hidden rounded-lg border bg-background shadow-2xl">
           {/* Search Input */}
-          <div className="flex items-center gap-3 px-4 py-3 bg-accent rounded-lg border shadow-xs">
-            <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
-            <input
-              ref={inputRef}
-              type="text"
-              placeholder="Search documentation..."
-              value={query}
-              onChange={(e) => handleSearch(e.target.value)}
-              onKeyDown={handleKeyDown}
-              autoFocus
-              className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-            />
+          <div className="px-2 pt-2">
+            <div className="flex items-center gap-3 px-4 py-3 bg-accent rounded-lg border shadow-xs">
+              <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
+              <input
+                ref={inputRef}
+                type="text"
+                placeholder="Search documentation..."
+                value={query}
+                onChange={(e) => handleSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
+                autoFocus
+                className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+              />
+            </div>
           </div>
 
           {/* Search Results */}
@@ -470,7 +491,7 @@ export function ComponentSearch({ open, onOpenChange }: ComponentSearchProps) {
           </div>
 
           {/* Footer */}
-          <div className="border-t border-border p-3 pb-1">
+          <div className="border-t border-border p-3 bg-muted">
             <div className="flex items-center justify-between text-[11px] text-muted-foreground">
               <div className="flex items-center gap-3">
                 <span className="flex items-center gap-1">
@@ -495,7 +516,7 @@ export function ComponentSearch({ open, onOpenChange }: ComponentSearchProps) {
                     onClick={(e) =>
                       copyInstallCommand(selected.installCommand!, e as any)
                     }
-                    className="flex items-center gap-3 bg-background text-xs text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-3 text-xs text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <div className="max-w-[360px] text-xs text-muted-foreground truncate">
                       {selected.installCommand}
